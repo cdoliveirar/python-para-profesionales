@@ -2,7 +2,7 @@
 Python sigue la regla PEMDAS. PEMDAS significa paréntesis, exponentes, multiplicación y división y suma y resta.
 '''
 def precedence():
-    a, b, c, d = 2, 3, 5, 7
+    a, b, c, d = 2, 3, 5, 7  # desempaquetado de variables
     print(a ** (b + c))     # parentesis
 
     print(a * b ** c)       # Exponente, lo mismo que  `a * (b ** c)`

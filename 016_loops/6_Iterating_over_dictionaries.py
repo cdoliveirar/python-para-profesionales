@@ -1,10 +1,11 @@
 '''
-
+Iterar sobre diccionarios
 '''
 
 d = {"a": 1, "b": 2, "c": 3}
 # Para iterar a través de sus claves, puedes usar
 for key in d:
+    print(key, d[key])
     print(key)
 
 # Para iterar a través de sus valores, usa

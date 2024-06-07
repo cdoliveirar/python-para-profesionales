@@ -57,7 +57,31 @@ Write               ✘       ✔       ✔       ✔       ✔       ✔
 Creates ﬁle         ✘       ✘       ✔       ✔       ✔       ✔
 Erases ﬁle          ✘       ✘       ✔       ✔       ✘       ✘    
 Initial position    Start   Start   Start   Start   End     End
-
-
+'''
 
 '''
+Python 3 añadió un nuevo modo para la creación exclusiva, de manera que accidentalmente no trunques o sobreescribas 
+un archivo existente.
+
+'x' - abrir para creación exclusiva, generará FileExistsError si el archivo ya existe.
+'xb' - abrir para creación exclusiva en modo de escritura en binario. Igual que 'x' excepto que los datos están en 
+binario.
+'x+' - modo de lectura y escritura. Similar a 'w+' ya que creará un nuevo archivo si el archivo no existe. De lo 
+contrario, generará FileExistsError.
+'xb+' - modo de escritura y lectura. Exactamente igual que 'x+' pero los datos están en binario.
+
+                    x       x+
+Read                ✘       ✔            
+Write               ✔       ✔
+Creates ﬁle         ✔       ✔
+Erases ﬁle          ✘       ✘      
+Initial position    Start   Start    
+
+Permite escribir el código de apertura de archivos de una manera más pitónica:
+'''
+
+try:
+    with open("fname", "r") as fout:
+        '''Trabajar con tu fichero abierto'''
+except FileExistsError:
+        '''Tu manejo de erroo va aqui'''
