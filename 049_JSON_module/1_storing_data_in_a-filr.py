@@ -14,5 +14,10 @@ d = {
 }
 
 with open("jsonfile.txt", 'w') as f:
-    json.dump(d, f)     # Convierte dict a json
+    json.dump(d, f)     # Convierte dict a json (serializacion a Json)
 
+
+''' 
+dump: Escribe datos JSON en un archivo.
+dumps: Convierte datos Python a una cadena JSON.
+'''
